@@ -1,0 +1,14 @@
+ResNet-18:
+Accuracy = 0.4807
+Test on CIFAR100 cost 1.119158 seconds
+ResNet-18-NoRes:
+Accuracy = 0.4849
+Test on CIFAR100 cost 0.817885 seconds
+
+
+ResNet-20:
+Test on CIFAR100 cost 0.217943 seconds
+Accuracy: 0.5998
+ResNet-20-NoRes:
+Test on CIFAR100 cost 0.197889 seconds
+Accuracy: 0.5767
