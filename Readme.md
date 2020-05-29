@@ -46,8 +46,7 @@ In the second stage, we use the model from the first stage to **supervise** the 
 Results|ResNet-18|ResNet-18-Plain|ResNet-20|ResNet-20-Plain
 :-----:|:-------:|:-------------:|:-------:|:-------------:
 Accuracy|48.07%|48.49%|59.98%|57.67%
-Inference Time(s)|1.119|0.818|0.218|0.198
-
+Inference Time(s)|1.119|0.818|0.218|0.198  
 ResNet-18 is the original implementation for ImageNet, which has 4 stages and 64-256 channels.
 ResNet-20 is specially designed for CIFAR dataset, which has only 3 stages and 16-64 channels. That's why it's faster than ResNet-18.
 The inference time is the total inference time on the CIFAR100 test set, with batch size = 1024 for ResNet-20.
