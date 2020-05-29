@@ -36,11 +36,13 @@ This project consists of three python scripts.
 *ResNet.py* defines a set of **standard ResNets** modified according to the ResNet paper to suit the CIFAR100 dataset.  
 *ResNet_plain.py* defines a corresponding set of **ResNets without residual branches**, "plain ResNet" for short.  
 The latter two scripts are modified based on the [official ResNet implementation](https://github.com/pytorch/vision/blob/master/torchvision/models/resnet.py)provided by *Pytorch*.
+
 --------------------------------------------------------
 ### Training method
 We used a 2-stage training method to obtain a plain ResNet.  
 In the first stage, we train the stardard ResNet on CIFAR100.  
 In the second stage, we use the model from the first stage to **supervise** the training of the plain ResNet. To be more specific, we divide the plain ResNet natually into **3 stages** (by the downsampling layer), and we train them **one by one**. For each stage, **we train to make its output feacher map as similar to the standard ResNet's output as possible**. To measure the similarity between two output feature maps, we use a per pixel loss, which is the **manhattan distance** between the two tensors. Each loss is responsible for training **the one stage just before it**. Finally, after the three stages are well trained, we fine-tune the whole plain ResNet for a few epoches. Refer to the image below for a better understanding of this procedure.
+
 --------------------------------------------------------
 ### Experiment Results
 |Results|ResNet-18|ResNet-18-Plain|ResNet-20|ResNet-20-Plain|
@@ -53,6 +55,7 @@ ResNet-18 is the original implementation for ImageNet, which has 4 stages and 64
 ResNet-20 is specially designed for CIFAR dataset, which has only 3 stages and 16-64 channels. That's why it's faster than ResNet-18.
 The inference time is the total inference time on the CIFAR100 test set, with batch size = 1024 for ResNet-20.
 I also tried ResNet-101 with 3 stages, but it seems that 3 stages is not enough for such deep network. The result is either not converging or getting a rather low accuracy, which is probably the results of the final fine-tune procedure in my point of view.
+
 --------------------------------------------------------
 ### Special Thanks
 Special thanks to my senior [Xin Ye](https://github.com/NixeyJay) for the basic idea of this project and his pungent advices.  
