@@ -10,27 +10,27 @@ ResNet is a commonly used backbone network for many vision tasks.  Its superior 
 
 ### About This Project
 ##### Libraries Required
->CUDA = 10.1 (optional but recommended)
->Python = 3.8.3
->Numpy = 1.18.1
->Pytorch = 1.5.0
->TensorboardX = 2.2.1 & Tensorflow = 2.2.0 (optional)
+>CUDA = 10.1 (optional but recommended)  
+>Python = 3.8.3  
+>Numpy = 1.18.1  
+>Pytorch = 1.5.0  
+>TensorboardX = 2.2.1 & Tensorflow = 2.2.0 (optional)  
 
-All libraries were installed using *Anaconda2* except *Tensorflow*, which was installed using *Pip*. 
-*Numpy* and *CUDA* will be installed automatically while installing *Pytorch*. Try `conda install pytorch torchvision cudatoolkit=10.1 -c pytorch`
-*TensorboardX* is used for visualizing training losses and accuracies, and *Tensorflow* is installed to support *TensorboardX*.
-Other libraries were installed by *Anaconda2* automatically.
-Other versions of these libraries might also work for you. But I can't guarantee that.
+All libraries were installed using *Anaconda2* except *Tensorflow*, which was installed using *Pip*.   
+*Numpy* and *CUDA* will be installed automatically while installing *Pytorch*. Try `conda install pytorch torchvision cudatoolkit=10.1 -c pytorch`  
+*TensorboardX* is used for visualizing training losses and accuracies, and *Tensorflow* is installed to support *TensorboardX*.  
+Other libraries were installed by *Anaconda2* automatically.  
+Other versions of these libraries might also work for you. But I can't guarantee that.  
 ##### Run a simple test demo
-Use the following command to run a simple test demo. 
-The two models in *{$project_root_dir}/models/ResNet-20/* will be tested on *CIFAR100* dataset.
-`cd {$project_root_dir}`
-`python ResNet_Distillation.py`
+Use the following command to run a simple test demo.   
+The two models in *{$project_root_dir}/models/ResNet-20/* will be tested on *CIFAR100* dataset.  
+`cd {$project_root_dir}`  
+`python ResNet_Distillation.py`  
 ##### Project Files
-This project consists of three python scripts.
->ResNet_Distillation.py
->ResNet.py
->ResNet_plain.py
+This project consists of three python scripts.  
+>ResNet_Distillation.py  
+>ResNet.py  
+>ResNet_plain.py  
 
 *ResNet_Distillation.py* is the main script. It contains dataset loading, train settings, test settings, etc.
 *ResNet.py* defines a set of **standard ResNets** modified according to the ResNet paper to suit the CIFAR100 dataset.
