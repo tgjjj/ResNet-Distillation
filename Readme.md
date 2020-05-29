@@ -1,5 +1,5 @@
 # ResNet with No Res
-##### Accelerating ResNet by removing its residual branch
+#### Accelerating ResNet by removing its residual branch
 
 --------------------------------------------------------
 
