@@ -58,6 +58,6 @@ The inference time is the total inference time on the CIFAR100 test set, with ba
 I also tried ResNet-101 with 3 stages, but it seems that 3 stages is not enough for such deep network. The result is either not converging or getting a rather low accuracy, which is probably the results of the final fine-tune procedure in my point of view.
 
 --------------------------------------------------------
-### Special Thanks
+### Acknowledgement
 Special thanks to my senior [Xin Ye](https://github.com/NixeyJay) for the basic idea of this project and his pungent advices.  
 Special thanks to [my college](http://www.cbeis.zju.edu.cn/cbeiscn/main.htm) for providing all the resources and experimental environment in this project.  
